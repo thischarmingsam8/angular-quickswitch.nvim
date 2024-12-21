@@ -1,3 +1,6 @@
+-- Based on code from Matthias Weiss
+-- Original repository: https://github.com/matthiasweiss/angular-quickswitch.nvim
+
 local M = {}
 
 local file_path_transformations = {
@@ -40,17 +43,6 @@ local function open_target_file(opts)
 
 	error(":" .. opts.command .. " could not determine target file", 1)
 end
-
--- function M.quick_switch_toggle()
---     local file_path_transformation_map = {
---         { regex = "%.component%.ts$",   transform = file_path_transformations.classToTemplate },
---         { regex = "%.component%.html$", transform = file_path_transformations.templateToClass },
---         { regex = "%.spec%.ts$",        transform = file_path_transformations.testToClass },
---         { regex = "%.ts$",              transform = file_path_transformations.classToTest },
---     }
---
---     open_target_file({ file_path_transformation_map = file_path_transformation_map, command = "NgQuickSwitchToggle" })
--- end
 
 function M.quick_switch_class()
 	local file_path_transformation_map = {
