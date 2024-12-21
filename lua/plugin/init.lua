@@ -90,9 +90,9 @@ function M.setup(opts)
 	vim.api.nvim_create_user_command("NgQuickSwitchStyles", M.quick_switch_styles, { desc = "Angular: Switch to SCSS" })
 
 	if opts.use_default_keymaps then
-		vim.keymap.set("n", "<leader>ac", ":NgQuickSwitchComponent<cr>")
-		vim.keymap.set("n", "<leader>as", ":NgQuickSwitchStyles<cr>")
-		vim.keymap.set("n", "<leader>at", ":NgQuickSwitchTemplate<cr>")
+		vim.keymap.set("n", "<leader>ac", ":NgQuickSwitchComponent<cr>", { desc = "Angular: Switch to component" })
+		vim.keymap.set("n", "<leader>as", ":NgQuickSwitchStyles<cr>", { desc = "Angular: Switch to SCSS" })
+		vim.keymap.set("n", "<leader>at", ":NgQuickSwitchTemplate<cr>", { desc = "Angular: Switch to template" })
 	end
 end
 
