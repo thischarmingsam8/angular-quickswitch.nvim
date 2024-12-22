@@ -77,11 +77,10 @@ end
 function M.setup(opts)
 	opts = opts or {}
 
-	vim.api.nvim_create_user_command(
-		"NgQuickSwitchComponent",
-		M.quick_switch_class,
-		{ desc = "Angular: Switch to component" }
-	)
+	vim.api.nvim_create_user_command("NgQuickSwitchComponent", function()
+		vim.cmd("silent! " .. M.quick_switch_class())
+	end, { nargs = 1, desc = "Angular: Switch to component" })
+
 	vim.api.nvim_create_user_command(
 		"NgQuickSwitchTemplate",
 		M.quick_switch_template,
