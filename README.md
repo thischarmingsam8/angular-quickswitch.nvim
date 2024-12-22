@@ -7,7 +7,6 @@ This plugin is a clone of https://github.com/matthiasweiss/angular-quickswitch.n
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```
-```
 { "thischarmingsam8/angular-quickswitch.nvim", opts = { use_default_keymaps = true } }
 ```
 
@@ -33,11 +32,13 @@ Since calling the commands manually each time is quite cumbersome, I use the fol
 
 
 If you don't want to use the same keymaps, you can remove `use_default_keymaps=true` as follows:
+
 ```
 { "thischarmingsam8/angular-quickswitch.nvim", opts = {} }
 ```
-If you choose to specify your own keymaps, make sure to add 'slient = true' to your keymap options to prevent the command modal from appearing during the switch. 
-```
+
+If you choose to specify your own keymaps, make sure to add `slient = true` to your keymap options to prevent the command modal from appearing during the switch.
+
 ## which-key
 
 If you are using which-key, add this to your user plugin files to add a group for the keymappings:
